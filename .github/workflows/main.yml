@@ -16,10 +16,10 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Node 14
-        uses: actions/setup-node@v1
+      - name: Node 20
+        uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 20.x
 
       - name: Prepare
         run: |
@@ -33,7 +33,7 @@ jobs:
         run: npm run build -- --prod
 
       - name: Upload
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           name: angular_dist
           path: www
@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Cache node modules
         uses: actions/cache@v1
@@ -53,10 +53,10 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Node 14
-        uses: actions/setup-node@v1
+      - name: Node 20
+        uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 20.x
 
       - name: Prepare
         run: npm ci
