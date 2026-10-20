@@ -132,7 +132,7 @@
     "@walletconnect/client": "^1.4.1",
     "@walletconnect/core": "2.8.0",
     "@walletconnect/utils": "2.8.0",
-    "@walletconnect/web3wallet": "1.8.0",
+    "@walletconnect/web3wallet": "1.16.1",
     "@zondax/ledger-substrate": "^0.17.3",
     "@zxing/browser": "0.1.4",
     "@zxing/library": "^0.20.0",
